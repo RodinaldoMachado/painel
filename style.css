@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style-type: none;
+
+}
+
+.container{
+    display:grid;
+    height: 99.99vh;
+    width: 99.99vw;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    
+}
+.container .conteiner-maquina{
+    padding: 15px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .conteiner-maquina .container-nome{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+.container .conteiner-maquina h2{
+    font-size: 2.5em;
+}
+
+.container .conteiner-maquina h3{
+    margin-top: 5px;
+    font-size:1.3em;
+}
+
+.container .motivo-parada{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.container .conteiner-maquina .text-rigth{
+    text-align: right;
+    font-size: 14px;
+}
+
+.container .motivo-parada .molde{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.container .motivo-parada .motivo-da-parada{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.manutencao{
+    background-color: rgb(203, 2, 2);
+    color:white;
+}
+
+.rodando{
+    background-color: rgb(54, 255, 47);
+    
+}
+
+.fora-de-ciclo{
+    background-color: rgb(251, 255, 0);
+}
+
+.setup{
+    background-color: rgb(8, 28, 240);
+    color: white;
+}
+
+.ferramentaria{
+    background-color: rgb(124, 70, 0);
+    color: #fff;
+}
+
+.producao{
+    background-color: rgb(138, 138, 138);
+    color: #fff;
+    
+}
+
+.pcp{
+    background-color: #ffffff;
+    color: rgb(44, 44, 44);
+    
+}
+
+.cq{
+    background-color: rgb(172, 20, 103);
+    color: #fff;
+    
+}
+
+.materia{
+    background-color:rgb(226, 136, 0) ;
+    color: white;
+    
+}
+
+.container .conteiner-maquina.teste{
+    background-color:rgb(79, 2, 124) ;
+    color: #fff;
+    
+}
+
+.container .conteiner-maquina.abaixo-do-ciclo{
+    background-color: rgb(78, 214, 255);
+}
+
+.container .conteiner-maquina.regulagem{
+    background-color: black;
+    border: 1px solid #fff;
+    color: white;
+}
+
+.fim-de-producao{
+    animation: fim-de-producao 3s linear infinite;
+}
+
+.fim-de-producao-fora-de-ciclo{
+    animation: fim-de-producao-fora-de-ciclo 3s linear infinite;
+}
+
+.fim-de-producao-abaixo-de-ciclo{
+    animation: fim-de-producao-abaixo-de-ciclo 3s linear infinite;
+}
+
+.info{
+    margin-left: 5px;
+}
+
+.oee,
+.prod,
+.prog{
+    font-size: 15px;
+    display: none;
+} 
+.visivel {
+    display: block;
+    width: 120px;
+    background-color: transparent;
+
+}
+
+@keyframes fim-de-producao {
+    0%{
+        background-color: rgb(54, 255, 47);
+    }
+    
+    50%{
+        background-color: rgb(12, 135, 6);
+        
+        /* color: white; */
+    }
+   
+    100%{
+        background-color: rgb(54, 255, 47);
+    }
+}
+
+@keyframes fim-de-producao-fora-de-ciclo {
+    0%{
+        background-color: rgb(230, 230, 2);
+    }
+   
+    50%{
+        background-color: rgb(12, 135, 6);
+        /* color: white; */
+    }
+  
+    100%{
+        background-color: rgb(230, 230, 2);
+    }
+}
+
+@keyframes fim-de-producao-abaixo-de-ciclo {
+    0%{
+        background-color: rgb(78, 214, 255);
+    }
+   
+    50%{
+        background-color: rgb(12, 135, 6);
+        /* color: white; */
+    }
+  
+    100%{
+        background-color: rgb(78, 214, 255);
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .container .conteiner-maquina h2{
+        font-size: 1.9em;
+    }
+
+    .container .motivo-parada .motivo-da-parada{
+        font-size: 16px;
+    }
+
+    .container .conteiner-maquina .text-rigth{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1200px){
+    .container .conteiner-maquina h2{
+        font-size: 1.5em;
+    }
+
+    .container .motivo-parada .motivo-da-parada{
+        font-size: 14px;
+    }
+
+    .container .motivo-parada .molde{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        
+    }
+}
+
+@media (max-width:450px){
+    .container{
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        
+    }
+}
